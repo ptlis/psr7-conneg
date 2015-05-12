@@ -1,0 +1,56 @@
+{
+    "name":         "ptlis/psr7-conneg",
+    "description":  "PSR7 content negotiation",
+    "license":      "MIT",
+    "keywords":     [
+        "content",
+        "negotiation",
+        "parse",
+        "http",
+        "field",
+        "header",
+        "types",
+        "charset",
+        "language",
+        "mime",
+        "encoding",
+        "content-type",
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "accept-charset",
+        "psr7",
+        "psr-7",
+        "http-message"
+    ],
+    "type":         "library",
+    "authors": [
+        {
+            "name": "brian ridley",
+            "email":"ptlis@ptlis.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ptlis/conneg": "~3.0",
+        "psr/http-message": "~0.11"
+    },
+    "require-dev": {
+        "pdepend/pdepend":                      "~2.0",
+        "phploc/phploc":                        "~2.0",
+        "phpmd/phpmd":                          "~2.2",
+        "phpunit/phpunit":                      "~4.5",
+        "sebastian/phpcpd":                     "~2.0",
+        "squizlabs/php_codesniffer":            "~2.0",
+        "phly/http":                            "~0.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "ptlis\\Psr7ConNeg\\": "src/",
+            "ptlis\\Psr7ConNeg\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
