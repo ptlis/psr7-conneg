@@ -4,6 +4,8 @@ A content negotiation middleware that uses the PSR-7 interfaces.
 
 Based on [ptlis\ConNeg](https://github.com/ptlis/conneg).
 
+[![Build Status](https://travis-ci.org/ptlis/psr7-conneg.png?branch=master)](https://travis-ci.org/ptlis/psr7-conneg) [![Code Coverage](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/?branch=master) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/ptlis/psr7-conneg/blob/master/licence.txt) [![Latest Stable Version](https://poser.pugx.org/ptlis/psr7-conneg/v/stable.png)](https://packagist.org/packages/ptlis/psr7-conneg)
+
 ## Install
 
 Either from the console:
