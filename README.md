@@ -42,9 +42,9 @@ The package ships with a single class to provide negotiation.
     $negotiator = new Negotiator();
 ```
 
-To opt-in to negotiation on a field use the appropriate ```with*``` method (note these methods return a new instance in manner of the PSR-7 interfaces). 
+To opt-in to negotiation on a field use the appropriate ```with*``` method (note these methods return a new instance in the manner of the PSR-7 interfaces). 
 
-To negotiate the preferred mime-type use the ```withMime`` method, providing it with a list of your application's type preference:
+To negotiate the preferred mime-type use the ```withMime``` method, providing it with a list of your application's type preference:
 
 ```
     $negotiator = $negotiator->withMime('application/json;q=1.0,text/xml;q=0.7');
