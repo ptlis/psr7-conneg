@@ -11,7 +11,7 @@ Based on [ptlis\ConNeg](https://github.com/ptlis/conneg).
 Either from the console:
 
 ```shell
-    $ composer require ptlis/psr7-conneg:~0.1
+    $ composer require ptlis/psr7-conneg:~1.0
 ```
 
 Or by Editing composer.json:
@@ -20,7 +20,7 @@ Or by Editing composer.json:
     {
         "require": {
             ...
-            "ptlis/conneg-psr7-conneg": "~0.1",
+            "ptlis/conneg-psr7-conneg": "~1.0",
             ...
         }
     }
