@@ -13,7 +13,7 @@ Built upon [ptlis/ConNeg](https://github.com/ptlis/conneg).
 Either from the console:
 
 ```shell
-    $ composer require ptlis/psr7-conneg:~1.0
+    $ composer require ptlis/psr7-conneg:~1.1
 ```
 
 Or by Editing composer.json:
@@ -22,7 +22,7 @@ Or by Editing composer.json:
     {
         "require": {
             ...
-            "ptlis/conneg-psr7-conneg": "~1.0",
+            "ptlis/conneg-psr7-conneg": "~1.1",
             ...
         }
     }
@@ -69,7 +69,7 @@ If the Accept field of the request contained ```application/json,text/xml``` the
 
 ### With Zend-Stratigility
 
-To use the zend-stratigility component configure your negotiator instance as described above and pass it to the Stratigility negotiator.
+To use the zend-stratigility component, configure your negotiator instance as described above and pass it to the Stratigility negotiator.
  
 ```
     $stratigilityNegotiator = new StratigilityNegotiator($negotiator);
