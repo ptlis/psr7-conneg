@@ -13,8 +13,8 @@
 
 namespace ptlis\Psr7ConNeg\Test;
 
-use Phly\Http\ServerRequest;
 use ptlis\Psr7ConNeg\Negotiator;
+use Zend\Diactoros\ServerRequest;
 
 /**
  * Very simple test suite - all heavy lifting is done by ptlis\ConNeg which has it's own tests.
