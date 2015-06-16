@@ -15,12 +15,11 @@ namespace ptlis\Psr7ConNeg;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Zend\Stratigility\MiddlewarePipe;
 
 /**
- * Content negotiation middleware targeting the Zend Stratigility interfaces
+ * Content negotiation middleware targeting Relay.
  */
-class StratigilityNegotiator extends MiddlewarePipe
+class RelayNegotiator
 {
     /**
      * @var Negotiator
@@ -36,19 +35,21 @@ class StratigilityNegotiator extends MiddlewarePipe
     public function __construct(Negotiator $negotiator)
     {
         $this->negotiator = $negotiator;
-
-        parent::__construct();
     }
 
     /**
-     * Performs negotiation and passes the now decorated request to the next middleware.
+     * Performs negotiation and passes the now decorated request to the next middleware in the queue.
      *
-     * {@inheritDoc}
+     * @param Request $request
+     * @param Response $response
+     * @param callable $next
+     *
+     * @return Response
      */
-    public function __invoke(Request $request, Response $response, callable $out = null)
+    public function __invoke(Request $request, Response $response, callable $next)
     {
-        $modifiedRequest = $this->negotiator->negotiate($request);
+        $newRequest = $this->negotiator->negotiate($request);
 
-        parent::__invoke($modifiedRequest, $response, $out);
+        return $next($newRequest, $response);
     }
 }

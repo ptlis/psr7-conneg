@@ -70,7 +70,7 @@ If the Accept field of the request contained ```application/json,text/xml``` the
 ### With Zend-Stratigility
 
 To use the zend-stratigility component, configure your negotiator instance as described above and pass it to the Stratigility negotiator.
- 
+
 ```
     $stratigilityNegotiator = new StratigilityNegotiator($negotiator);
 ```
@@ -84,9 +84,23 @@ To perform negotiation on all routes, add it with an empty route:
 For further information please refer to the Stratigility documentation.
 
 
+### With Relay
+ 
+To use the relay component, configure your negotiator instance as described above and pass it to the Relay negotiator.
+
+```
+    $queue[] = new RelayNegotiator($negotiator);
+```
+
+Note: The negotiator must be earlier in the queue than middleware components that depend upon negotiation data.
+
+
 ## Integration
 
-* A [Zend-Stratigility](https://github.com/zendframework/zend-stratigility) middleware implementation is bundled.
+Middlewares integration is shipped for the following packages:
+
+* [Zend-Stratigility](https://github.com/zendframework/zend-stratigility)
+* [Relay](https://github.com/relayphp/Relay.Relay)
 
 
 ## Contributing
