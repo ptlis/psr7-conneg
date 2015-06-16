@@ -42,7 +42,11 @@
         "phpunit/phpunit":                      "~4.5",
         "sebastian/phpcpd":                     "~2.0",
         "squizlabs/php_codesniffer":            "~2.0",
-        "zendframework/zend-diactoros":         "~1.0"
+        "zendframework/zend-diactoros":         "~1.0",
+        "zendframework/zend-stratigility":      "~1.0"
+    },
+    "suggest": {
+        "zendframework/zend-stratigility": "To use the bundled stratigility middleware."
     },
     "autoload": {
         "psr-4": {

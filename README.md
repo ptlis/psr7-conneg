@@ -2,7 +2,9 @@
 
 A content negotiation middleware that uses the PSR-7 interfaces.
 
-Based on [ptlis\ConNeg](https://github.com/ptlis/conneg).
+Configurable component that decorate processed requests with preferred type information. 
+
+Built upon [ptlis/ConNeg](https://github.com/ptlis/conneg).
 
 [![Build Status](https://travis-ci.org/ptlis/psr7-conneg.png?branch=master)](https://travis-ci.org/ptlis/psr7-conneg) [![Code Coverage](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ptlis/psr7-conneg/?branch=master) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/ptlis/psr7-conneg/blob/master/licence.txt) [![Latest Stable Version](https://poser.pugx.org/ptlis/psr7-conneg/v/stable.png)](https://packagist.org/packages/ptlis/psr7-conneg)
 
@@ -63,7 +65,28 @@ This adds attributes to the request containing the preferred type. These can be 
 ```
 
 If the Accept field of the request contained ```application/json,text/xml``` then the value returned from this lookup would be ```application/json```.
+
+
+### With Zend-Stratigility
+
+To use the zend-stratigility component configure your negotiator instance as described above and pass it to the Stratigility negotiator.
  
+```
+    $stratigilityNegotiator = new StratigilityNegotiator($negotiator);
+```
+
+To perform negotiation on all routes, add it with an empty route:
+
+```
+    $app->pipe('', $stratigilityNegotiator);
+```
+
+For further information please refer to the Stratigility documentation.
+
+
+## Integration
+
+* A [Zend-Stratigility](https://github.com/zendframework/zend-stratigility) middleware implementation is bundled.
 
 
 ## Contributing
